@@ -19,8 +19,20 @@ functions:
     handler: handler.hello
     events:
       - httpApi:
-          path: /
+          path: /hello-world
           method: get
+  user:
+    handler: handler.user
+    events:
+      - httpApi:
+          path: /user
+          method: get
+  post:
+    handler: handler.post
+    events:
+      - httpApi:
+          path: /post
+          method: post
 plugins:
   - serverless-plugin-typescript
   - serverless-offline
